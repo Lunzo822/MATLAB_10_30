@@ -1,0 +1,23 @@
+L(1)=Link([0 0 0 0]);
+L(2)=Link([0 0.138+0.024 0 -pi/2]);
+L(3)=Link([0 -0.127+0.024 0.420 0]);
+L(4)=Link([0 0.114+0.021 0.375 0]);
+L(5)=Link([0 0.114+0.021 0 -pi/2]);
+L(6)=Link([0 0.090+0.021 0 pi/2]);
+Six_Link=SerialLink([L(1),L(2),L(3),L(4),L(5),L(6)]);
+Six_Link.fkine([pi/2 -pi/4 pi/2 pi/3 -pi/2 pi/6]);
+figure(1);
+Six_Link.plot([pi/2 -pi/4 pi/2 pi/3 -pi/2 pi/6]);
+
+L(1)=Link([0 0 0 0],'modified');
+L(2)=Link([0 0.138+0.024 0 -pi/2],'modified');
+L(3)=Link([0 -0.127+0.024 0.420 0],'modified');
+L(4)=Link([0 0.114+0.021 0.375 0],'modified');
+L(5)=Link([0 0.114+0.021 0 -pi/2],'modified');
+L(6)=Link([0 0.090+0.021 0 pi/2],'modified');
+Six_Link=SerialLink([L(1),L(2),L(3),L(4),L(5),L(6)]);
+Six_Link.fkine([pi/2 -pi/4 pi/2 pi/3 -pi/2 pi/6]);
+figure(2);
+Six_Link.plot([pi/2 -pi/4 pi/2 pi/3 -pi/2 pi/6]);
+figure(3);
+Six_Link.teach([pi/2 -pi/4 pi/2 pi/3 -pi/2 pi/6]);
